@@ -96,15 +96,15 @@ nfc.on('reader', reader => {
                 console.log(data.length > 0);
                 if (data.length > 0) {
                     console.log('NFC - User found ', data);
-                    let tempColor;
-                    if (data[0].company === 'bp') {
-                        tempColor = 24255;
-                    } else if (data[0].company === 'shell') {
-                        tempColor = 10509;
-                    } else {
-                        tempColor = 42043;
-                    }
-                    actions.hueChangeLightColor(hueClient, 1, tempColor);
+                    // let tempColor;
+                    // if (data[0].company === 'bp') {
+                    //     tempColor = 24255;
+                    // } else if (data[0].company === 'shell') {
+                    //     tempColor = 10509;
+                    // } else {
+                    //     tempColor = 42043;
+                    // }
+                    actions.hueChangeLightColor(hueClient, 1, data[0].companyColor1);
                     io.sockets.emit('Slave_login', data[0]);
                 } else {
                     console.log('No User');
@@ -135,13 +135,12 @@ nfc.on('reader', reader => {
 });
 
 // parentSocket ******************************************************************************************
-const url = "wss://w5andww5o4.execute-api.eu-west-1.amazonaws.com/prod";
+const url = 'wss://w5andww5o4.execute-api.eu-west-1.amazonaws.com/prod';
 const parentSocket = new WebSocket(url);
 
 // set up socket handlers
 parentSocket.on('open', () => console.log('parentSocket - connected socket'));
 parentSocket.on('message', data => {
-
     console.log(`From server onMessage: ${data}`);
 });
 parentSocket.on('close', () => {
@@ -149,12 +148,10 @@ parentSocket.on('close', () => {
     process.exit();
 });
 
-
-
 // Hue ******************************************************************************************
 let hueConnecitonInfo = {
     // ip: '192.168.1.152', // nicolay home ip
-    ip: '10.159.9.2', 
+    ip: '10.159.8.7',
     port: 80,
     username: 'Kc4m3pRbf5-CRqU3WiowD9GMSp6CpKnplFWMMLVB'
 };
