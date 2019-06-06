@@ -11,8 +11,8 @@ const cardUser = require('./database/models/cardUser');
 const actions = require('./actions');
 const PORT = 8080;
 const io = require('socket.io')(1337);
-const parentSocket = require('socket.io-client')('wss://w5andww5o4.execute-api.eu-west-1.amazonaws.com/prod:5000');
 const huejay = require('huejay');
+const WebSocket = require('ws');
 
 // Server ******************************************************************************************
 // Sessions
@@ -135,9 +135,20 @@ nfc.on('reader', reader => {
 });
 
 // parentSocket ******************************************************************************************
-parentSocket.on('connect', function(){
-    console.log(`NFC - connected to parentSocket`);
+const url = "wss://w5andww5o4.execute-api.eu-west-1.amazonaws.com/prod";
+const parentSocket = new WebSocket(url);
+
+// set up socket handlers
+parentSocket.on('open', () => console.log('parentSocket - connected socket'));
+parentSocket.on('message', data => {
+
+    console.log(`From server onMessage: ${data}`);
 });
+parentSocket.on('close', () => {
+    console.log('parentSocket - disconnected');
+    process.exit();
+});
+
 
 
 // Hue ******************************************************************************************
