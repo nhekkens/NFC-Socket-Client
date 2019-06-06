@@ -1,0 +1,21 @@
+{
+  "name": "hostserver",
+  "version": "1.0.0",
+  "description": "online socket server to talk to socket clients",
+  "main": "server.js",
+  "dependencies": {
+    "connect-mongo": "^2.0.3",
+    "express": "^4.17.0",
+    "express-session": "^1.16.1",
+    "huejay": "^1.9.0",
+    "mongoose": "^5.5.10",
+    "nfc-pcsc": "^0.7.3",
+    "socket.io": "^2.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Nicolay Hekkens",
+  "license": "MIT"
+}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NFC - Registration Form</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript">
+    </script>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css'>
+    <link rel='stylesheet'
+        href='https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css'>
+</head>
+
+<style>
+    .container {
+        height: 100vh;
+        position: relative;
+    }
+
+    .well {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+    }
+</style>
+
+<body translate="no">
+    <div class="container">
+        <div class="start well">
+            <h2 style=" text-align: center; padding-bottom: 20px;">Please attach an Unregistered card</h2>
+        </div>
+
+        <div class="taken well" style="display: none;">
+            <h2 style="text-align: center; padding-bottom: 20px;">This card is registered already to:
+                <span class="person"></span></h2>
+            <button type="button" class="btn btn-danger deleteAction">Delete this user</button>
+            <span class="result" style="padding-left: 30px;"></span>
+        </div>
+
+        <form class="well form-horizontal" action="" method="post" id="registration_form" style="display: none;">
+            <fieldset>
+                <h3 class="col-md-12" style="text-align: center; padding-bottom: 20px;">Register New User</h3>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Name</label>
+                    <div class="col-md-4 ">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="name" placeholder="Name" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Country</label>
+                    <div class="col-md-4 ">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="country" placeholder="Country" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Company</label>
+                    <div class="col-md-4 ">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option value="bp">BP</option>
+                                <option value="shell">SHELL</option>
+                                <option value="bb">BB</option>
+                                <option value="bt">BT</option>
+                                <option value="ne">NICOLAY ENTERPRISES</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Title</label>
+                    <div class="col-md-4 ">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="title" placeholder="Title" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Email</label>
+                    <div class="col-md-4 ">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="email" placeholder="Email" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">CompanyNumber</label>
+                    <div class="col-md-4 ">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="companyNumber" placeholder="CompanyNumber" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">CompanyAddress</label>
+                    <div class="col-md-4 ">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="companyAddress" placeholder="CompanyAddress" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Company Color 1</label>
+                    <div class="col-md-4 ">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="companyColor1" placeholder="CompanyColor1" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Company Color 2</label>
+                    <div class="col-md-4 ">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="companyColor2" placeholder="CompanyColor2" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Company Color 3</label>
+                    <div class="col-md-4 ">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="companyColor3" placeholder="CompanyColor3" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-8 ">
+                        <button type="submit" class="btn btn-success">Register User</button>
+                        <span class="result"></span>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js'></script>
+
+    <script id="rendered-js">
+        $(document).ready(function () {
+            var socket = io('http://localhost:1337');
+            socket.on('Welcome to NFC', function (data) {
+                console.log('SOCKET - Welcome to NFC connected');
+            });
+
+            socket.on('Client_register_noCard', function (data) {
+                console.log('SOCKET - Client_register_noCard: ', data);
+                $('.taken').fadeOut(200);
+                $('form').fadeOut(200);
+                $('.start').fadeIn(200);
+            });
+
+            socket.on('Client_register_exists', function (data) {
+                console.log('SOCKET - Client_register_exists: ', data);
+                $('.taken .person').html(data[0].name);
+                $('.taken .result').html(' ');
+                $('.taken .deleteAction').data('id', data[0].id);
+
+                $('form').fadeOut(200);
+                $('.start').fadeOut(200);
+                $('.taken').fadeIn(200);
+            });
+
+            socket.on('Client_register_readyToRegister', function (data) {
+                console.log('SOCKET - Client_register_readyToRegister: ', data);
+                $('form').data('id', data);
+
+                $('.taken').fadeOut(200);
+                $('.start').fadeOut(200);
+                $('form').fadeIn(200);
+            });
+
+
+            // Delete Mangement
+            $('.taken .deleteAction').on('click', function () {
+                socket.emit('Server_delete_cardUser', $(this).data('id'))
+            })
+
+            socket.on('Client_delete_cardUser_error', function (data) {
+                console.log('SOCKET - Client_delete_cardUser_error: ', data);
+                $('.taken .result').html('ERROR: ' + data);
+            });
+
+            socket.on('Client_delete_cardUser_success', function (data) {
+                console.log('SOCKET - Client_delete_cardUser_success: ', data);
+                $('.taken .result').html('SUCCESS, remove card');
+            });
+
+
+
+            // Register
+            $('form').on('submit', function (event) {
+                event.preventDefault();
+
+                let data = {
+                    id: $('form').data('id'),
+                    name: $("input[name='name']").val(),
+                    country: $("input[name='country']").val(),
+                    company: $("select").val(),
+                    title: $("input[name='title']").val(),
+                    email: $("input[name='email']").val(),
+                    companyNumber: $("input[name='companyNumber']").val(),
+                    companyAddress: $("input[name='companyAddress']").val(),
+                    companyColor1: $("input[name='companyColor1']").val(),
+                    companyColor2: $("input[name='companyColor2']").val(),
+                    companyColor3: $("input[name='companyColor3']").val()
+                }
+
+                socket.emit('Server_register_cardUser', data);
+            })
+
+            socket.on('Client_save_error', function (data) {
+                console.log('SOCKET - Client_save_error: ', data);
+                $('form .result').html('ERROR, remove card and try again.');
+            });
+
+            socket.on('Client_save_success', function (data) {
+                console.log('SOCKET - Client_save_success: ', data);
+                $('form .result').html('SUCCESS, remove card');
+                $("input[name='name']").val('');
+                $("input[name='country']").val('');
+                $("input[name='title']").val('');
+                $("input[name='email']").val('');
+                $("input[name='companyNumber']").val('');
+                $("input[name='companyAddress']").val('');
+                $("input[name='companyColor1']").val('');
+                $("input[name='companyColor2']").val('');
+                $("input[name='companyColor3']").val('');
+            });
+        });
+    </script>
+</body>
+
+</html>

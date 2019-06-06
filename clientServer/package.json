@@ -1,0 +1,30 @@
+{
+  "name": "nfc",
+  "version": "1.0.0",
+  "description": "Read data from NFC and Database with sockets",
+  "main": "server.js",
+  "dependencies": {
+    "connect-mongo": "^2.0.3",
+    "express": "^4.17.0",
+    "express-session": "^1.16.1",
+    "huejay": "^1.9.0",
+    "mongoose": "^5.5.10",
+    "nfc-pcsc": "^0.7.3",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@source.brilliantbasics.com:nhekkens/nfc-reader.git"
+  },
+  "keywords": [
+    "NFC",
+    "BB"
+  ],
+  "author": "Nicolay Hekkens",
+  "license": "MIT"
+}
