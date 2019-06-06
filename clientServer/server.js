@@ -11,6 +11,7 @@ const cardUser = require('./database/models/cardUser');
 const actions = require('./actions');
 const PORT = 8080;
 const io = require('socket.io')(1337);
+const parentSocket = require('socket.io-client')('wss://w5andww5o4.execute-api.eu-west-1.amazonaws.com/prod:5000');
 const huejay = require('huejay');
 
 // Server ******************************************************************************************
@@ -104,8 +105,7 @@ nfc.on('reader', reader => {
                         tempColor = 42043;
                     }
                     actions.hueChangeLightColor(hueClient, 1, tempColor);
-                    io.sockets.emit('Client_register_exists', data);
-                    io.sockets.emit('Slave_login', data);
+                    io.sockets.emit('Slave_login', data[0]);
                 } else {
                     console.log('No User');
                     io.sockets.emit('Client_register_readyToRegister', card.uid);
@@ -118,8 +118,7 @@ nfc.on('reader', reader => {
 
     reader.on('card.off', card => {
         console.log('NFC - card Detacted - ID: ' + card.uid);
-        io.sockets.emit('Client_register_noCard', card.uid);
-        io.sockets.emit('Slave_logout', 'No Data');
+        io.sockets.emit('Slave_logout', card.uid);
     });
 
     reader.on('error', err => {
@@ -134,6 +133,12 @@ nfc.on('reader', reader => {
         console.log('NFC - An error occurred', err);
     });
 });
+
+// parentSocket ******************************************************************************************
+parentSocket.on('connect', function(){
+    console.log(`NFC - connected to parentSocket`);
+});
+
 
 // Hue ******************************************************************************************
 let hueConnecitonInfo = {

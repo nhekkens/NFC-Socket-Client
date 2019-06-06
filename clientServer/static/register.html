@@ -161,18 +161,18 @@
                 console.log('SOCKET - Welcome to NFC connected');
             });
 
-            socket.on('Client_register_noCard', function (data) {
+            socket.on('Slave_logout', function (data) {
                 console.log('SOCKET - Client_register_noCard: ', data);
                 $('.taken').fadeOut(200);
                 $('form').fadeOut(200);
                 $('.start').fadeIn(200);
             });
 
-            socket.on('Client_register_exists', function (data) {
+            socket.on('Slave_login', function (data) {
                 console.log('SOCKET - Client_register_exists: ', data);
-                $('.taken .person').html(data[0].name);
+                $('.taken .person').html(data.name);
                 $('.taken .result').html(' ');
-                $('.taken .deleteAction').data('id', data[0].id);
+                $('.taken .deleteAction').data('id', data.id);
 
                 $('form').fadeOut(200);
                 $('.start').fadeOut(200);
