@@ -1,0 +1,248 @@
+{
+    "clientData": [{
+        "clientName": "10x Future Technologies Ltd",
+        "clientCode": "10ft",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Aberdeen Standard Investments",
+        "clientCode": "asi",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "AGCS UK",
+        "clientCode": "agcs",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "AGTB",
+        "clientCode": "agtb",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "AIMIA",
+        "clientCode": "aimia",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Avasant Limited UK",
+        "clientCode": "avas",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Barclays Bank PLC",
+        "clientCode": "barc",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "BP",
+        "clientCode": "bp",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Brit Insurance",
+        "clientCode": "bi",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "BUPA Global Holdings",
+        "clientCode": "bupa",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Burnt Oak Partners",
+        "clientCode": "bop",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "City of London",
+        "clientCode": "col",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Confederation of Indian Industry",
+        "clientCode": "coii",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Currencies Direct",
+        "clientCode": "cd",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Department of International Trade",
+        "clientCode": "dit",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Diageo",
+        "clientCode": "dia",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Direct Line Insurance Group",
+        "clientCode": "dlip",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "EY",
+        "clientCode": "ey",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Farfetch",
+        "clientCode": "far",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Fever Tree",
+        "clientCode": "ft",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Goldman Sachs",
+        "clientCode": "gs",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "HSBC",
+        "clientCode": "hsbc",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Husky Finance",
+        "clientCode": "husky",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "IDC",
+        "clientCode": "idc",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Imperial College London",
+        "clientCode": "icl",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "India Inc Group",
+        "clientCode": "iig",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Investec",
+        "clientCode": "inve",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Kings College London",
+        "clientCode": "kcl",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "M&G Prudential",
+        "clientCode": "mgp",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Markel International",
+        "clientCode": "mint",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "MYWW",
+        "clientCode": "myww",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Nasscom",
+        "clientCode": "nass",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Pierre Audoin Consultants Pac",
+        "clientCode": "pierre",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "RBS",
+        "clientCode": "rbs",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Royal Dutch Shell",
+        "clientCode": "rds",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Sainsbury's",
+        "clientCode": "sains",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Sanlam",
+        "clientCode": "san",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Santander",
+        "clientCode": "sant",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Saranac Partners",
+        "clientCode": "sara",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Spotify",
+        "clientCode": "spot",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "techuk",
+        "clientCode": "tech",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Telenet",
+        "clientCode": "tele",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Toyota Connected Europe LTD",
+        "clientCode": "toyota",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "UBS",
+        "clientCode": "ubs",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Virgin media",
+        "clientCode": "vm",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Welsh Water",
+        "clientCode": "ww",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "WorldPay",
+        "clientCode": "wp",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "Zeelo",
+        "clientCode": "zee",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }, {
+        "clientName": "BB / Other",
+        "clientCode": "bb",
+        "hueValue": 00000,
+        "hexValue": "#"
+    }]
+}

@@ -142,6 +142,7 @@ const parentSocket = new WebSocket(url);
 parentSocket.on('open', () => console.log('parentSocket - connected socket'));
 parentSocket.on('message', data => {
     console.log(`From server onMessage: ${data}`);
+    io.sockets.emit('Slave_step', data);
 });
 parentSocket.on('close', () => {
     console.log('parentSocket - disconnected');
