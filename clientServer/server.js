@@ -118,7 +118,7 @@ nfc.on('reader', reader => {
 
     reader.on('card.off', card => {
         console.log('NFC - card Detacted - ID: ' + card.uid);
-        io.sockets.emit('Slave_logout', card.uid);
+        io.sockets.emit('Slave_logout', {"end": "end"});
     });
 
     reader.on('error', err => {
