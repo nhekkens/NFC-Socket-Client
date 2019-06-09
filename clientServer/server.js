@@ -105,7 +105,7 @@ nfc.on('reader', reader => {
                     //     tempColor = 42043;
                     // }
                     actions.hueChangeLightColor(hueClient, 1, data[0].companyColor1);
-                    io.sockets.emit('Slave_login', data[0]);
+                    io.sockets.emit('Slave_login', data[0]);    
                 } else {
                     console.log('No User');
                     io.sockets.emit('Client_register_readyToRegister', card.uid);
@@ -137,12 +137,14 @@ nfc.on('reader', reader => {
 // parentSocket ******************************************************************************************
 const url = 'wss://w5andww5o4.execute-api.eu-west-1.amazonaws.com/prod';
 const parentSocket = new WebSocket(url);
+console.log("parentSocket = ", parentSocket);
 
 // set up socket handlers
 parentSocket.on('open', () => console.log('parentSocket - connected socket'));
 parentSocket.on('message', data => {
     console.log(`From server onMessage: ${data}`);
-    io.sockets.emit('Slave_step', data);
+
+    io.sockets.emit('Slave_step', {"alexaData":data});
 });
 parentSocket.on('close', () => {
     console.log('parentSocket - disconnected');
@@ -167,7 +169,7 @@ let hueClient = new huejay.Client({
 // actions.hueFindDevices(huejay);
 // actions.hueFindDevices(hueClient);
 // actions.hueTestConnection(hueClient);
-// actions.hueGetLightInfo(hueClient);
+actions.hueGetLightInfo(hueClient);
 // actions.hueCreateUser(hueClient);
 
 let colorHue = {
